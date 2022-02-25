@@ -1,7 +1,5 @@
 import { Redirect } from "react-router-dom";
 
-function RedirectToLandingPage() {
-    return <Redirect to={{pathname:'/'}}></Redirect>
+export default function RedirectToLandingPage(){
+    return <Redirect to={{pathname: '/'}} />
 }
-
-export default RedirectToLandingPage;

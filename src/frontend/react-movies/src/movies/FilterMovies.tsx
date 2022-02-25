@@ -1,8 +1,9 @@
-import { Field, Form, Formik } from "formik";
-import { genreDTO } from "../genres/genres.model";
+import { Field, Form, Formik } from "formik"
+import { genreDTO } from "../genres/genres.model"
 import Button from "../utils/Button";
 
-function FilterMovies() {
+export default function FilterMovies() {
+
     const initialValues: filterMoviesForm = {
         title: '',
         genreId: 0,
@@ -40,25 +41,25 @@ function FilterMovies() {
                             <div className="col-auto">
                                 <div className="form-check">
                                     <Field className="form-check-input" id="upcomingReleases"
-                                        name="upcomingReleases" type="checkbox" />
+                                    name="upcomingReleases" type="checkbox" />
                                     <label className="form-check-label"
-                                        htmlFor="upcomingReleases">Upcoming Releases</label>
+                                    htmlFor="upcomingReleases">Upcoming Releases</label>
                                 </div>
                             </div>
                             <div className="col-auto">
                                 <div className="form-check">
                                     <Field className="form-check-input" id="inTheaters"
-                                        name="inTheaters" type="checkbox" />
+                                    name="inTheaters" type="checkbox" />
                                     <label className="form-check-label"
-                                        htmlFor="inTheaters">In Theaters</label>
+                                    htmlFor="inTheaters">In Theaters</label>
                                 </div>
                             </div>
                             <div className="col-auto">
                                 <Button className="btn btn-primary"
-                                    onClick={() => formikProps.submitForm()}
+                                onClick={() => formikProps.submitForm()}
                                 >Filter</Button>
                                 <Button className="btn btn-danger ms-3"
-                                    onClick={() => formikProps.setValues(initialValues)}
+                                onClick={() => formikProps.setValues(initialValues)}
                                 >Clear</Button>
                             </div>
                         </div>
@@ -66,8 +67,7 @@ function FilterMovies() {
                 )}
             </Formik>
         </>
-
-    );
+    )
 }
 
 interface filterMoviesForm {
@@ -76,5 +76,3 @@ interface filterMoviesForm {
     upcomingReleases: boolean;
     inTheaters: boolean;
 }
-
-export default FilterMovies;
